@@ -26,10 +26,10 @@ function getServer() {
 	);
 	return server;
 }
-
+const PORT = process.env.PORT || 50051;
 var server = getServer();
 server.bindAsync(
-	"localhost:50051",
+	`localhost:${PORT}`,
 	grpc.ServerCredentials.createInsecure(),
 	() => {
 		console.log("server started");
