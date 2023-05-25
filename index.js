@@ -20,7 +20,7 @@ function getServer() {
 		{
 			createExample: (call, callback) => {
 				console.log("Received", call.request);
-				return callback(null, { field_one: 1 });
+				return callback(null, call.request);
 			},
 		}
 	);
