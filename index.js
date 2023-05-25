@@ -32,7 +32,7 @@ server.bindAsync(
 	`localhost:${PORT}`,
 	grpc.ServerCredentials.createInsecure(),
 	() => {
-		console.log("server started");
+		console.log("server started on port: " + PORT);
 		server.start();
 	}
 );
