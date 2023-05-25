@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.example.v1.graphql;
+
+option java_multiple_files = true;
+
+service ExampleService {
+
+  rpc CreateExample (Request) returns (Request);
+}
+
+message NestedObject {
+  string nested_field_one = 1;
+  string nested_field_two = 2;
+}
+
+message Request {
+  string field_one = 1;
+  string field_two = 2;
+  NestedObject nested = 3;
+}
